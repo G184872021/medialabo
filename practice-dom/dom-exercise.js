@@ -14,15 +14,30 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
-<h1>DOM プログラミング演習</h1>
-<h2 id ="ex42">演習4-2：説明文の追加</h2>
-<p styl="text-emphasis:sesame green;">写真表と年の緯度経度のページです</p>
-<h2>演習4-3：写真表を作る</h2>
+<>
+	//// 注意: 以上は編集しないこと!
+	// 練習4-2 メッセージ追加プログラム
+	<hi>DOM プログラミング演習</hi>
+	<h2 id="ex4">練習4－2：説明文の追加</h2>
+	<p style="text-emphasis: sesame green;">写真表と都市の緯度経度のページです</p>
+	<h2>練習4－3：写真表を作る</h2>
 // 練習4-3 写真表作成プログラム
+<div id="phototable">
+	<p>
+		<img src="taro.png"></img>
+	</p>
+	<p>
+		<img src="jiro.png"></img>
+	</p>
+	<p>
+		<img src="hanako.png"></img>
+	</p>
+</div>
 
+		// 練習4-4 箇条書き削除プログラム
+		let w = document.querySelector('li#location');  
+		w.remove();
 
-// 練習4-4 箇条書き削除プログラム
+	// 練習4-5 箇条書き追加プログラム
 
-
-// 練習4-5 箇条書き追加プログラム
-
+	<></>
