@@ -16,3 +16,6 @@ let gakka = [
 
 //////////////// ここから下にプログラムを書きたそう!
 
+console.log(campus.address);
+console.log(campus.buildingD);
+console.log(gakka.nsme);
