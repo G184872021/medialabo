@@ -17,5 +17,15 @@ let gakka = [
 //////////////// ここから下にプログラムを書きたそう!
 
 console.log(campus.address);
-console.log(campus.buildingD);
-console.log(gakka.nsme);
+console.log(campus.buildingD[0]);
+console.log(campus.buildingD[1]);
+console.log(campus.buildingD[2]);
+console.log(campus.buildingD[3]);
+console.log(campus.buildingD[4]);
+console.log(campus.buildingD[5]);
+console.log(campus.buildingD[6]);
+console.log(campus.buildingD[7]);
+console.log(gakka.nsme[0]);
+console.log(gakka.nsme[1]);
+console.log(gakka.nsme[2]);
+console.log(gakka.nsme[3]);
