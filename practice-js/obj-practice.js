@@ -25,7 +25,7 @@ console.log(campus.buildingD[4]);
 console.log(campus.buildingD[5]);
 console.log(campus.buildingD[6]);
 console.log(campus.buildingD[7]);
-console.log(gakka.name);
+console.log(gakka.name[0]);
 console.log(gakka.name);
 console.log(gakka.name);
 console.log(gakka.name);
