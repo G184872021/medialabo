@@ -14,7 +14,7 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
-
+<p>
 	//// 注意: 以上は編集しないこと!
 	// 練習4-2 メッセージ追加プログラム
 	<hi>DOM プログラミング演習</hi>
@@ -35,7 +35,7 @@ let data = [
 </div>
 
 		// 練習4-4 箇条書き削除プログラム
-		let w = document.querySelector('li#location');  
-		w.remove();
+		<p>let w = document.querySelector('li#location');  
+		w.remove();</p>
 
 	// 練習4-5 箇条書き追加プログラム
