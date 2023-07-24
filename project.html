@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>プロジェクト課題</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="weather.js"defer></script>
+  </head>
+  <body>
+    <h1>世界の天気</h1>
+    <label for="santaro">プルダウンメニュー</label>
+    <select name="country" id="country">
+        <option value="360630">カイロ</option>
+        <option value="524901">モスクワ</option>
+        <option value="993800">ヨハネスブルク</option>
+        <option value="1816670">北京</option>
+        <option value="1850147">東京</option>
+        <option value="1880252">シンガポール</option>
+        <option value="2147714">シドニー</option>
+        <option value="2643743">ロンドン</option>
+        <option value="2968815">パリ</option>
+        <option value="3451189">リオデジャネイロ</option>
+        <option value="5128581">ニューヨーク</option>
+        <option value="5368361">ロサンゼルス</option>
+    </select>
+    <button id="btn">検索</button>
+    <p id="lon"></p>
+    <p id="lat"></p>
+    <p id="description"></p>
+    <p id="temp_min"></p>
+    <p id="temp_max"></p>
+    <p id="humidity"></p>
+    <p id="speed"></p>
+    <p id="deg"></p>
+    <p id="name"></p>
+    
+  </body>
+</html>

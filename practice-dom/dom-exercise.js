@@ -14,28 +14,44 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
-<>
-	//// 注意: 以上は編集しないこと!
-	// 練習4-2 メッセージ追加プログラム
-	<hi>DOM プログラミング演習</hi>
-	<h2 id="ex4">練習4－2：説明文の追加</h2>
-	<p style="text-emphasis: sesame green;">写真表と都市の緯度経度のページです</p>
-	<h2>練習4－3：写真表を作る</h2>
+let h2_ex=document.querySelector('h2#ex42');
+let p=document.createElement('p');
+p.style.textEmphasis='sesame green';
+p.textContent='写真表と緯度経度のページです。';
+h2_ex.insertAdjacentElement('afterend',p);
+
+
+	
 // 練習4-3 写真表作成プログラム
-<div id="phototable">
-	<p>
-		<img src="taro.png"></img>
-	</p>
-	<p>
-		<img src="jiro.png"></img>
-	</p>
-	<p>
-		<img src="hanako.png"></img>
-	</p>
-</div>
+let div=document.querySelector('div#phototable');
+let p_img1=document.createElement('p');
+let img1=document.createElement('img');
+img1.setAttribute("src","taro.png");
+p_img1.insertAdjacentElement('beforeend',img1);
+div.insertAdjacentElement("beforeend",p_img1);
 
-		// 練習4-4 箇条書き削除プログラム
-		<p>let w = document.querySelector('li#location');  
-		w.remove();</p>
+let p_img2=document.createElement('p');
+let img2=document.createElement('img');
+img2.setAttribute("src","jiro.png");
+p_img2.insertAdjacentElement('beforeend',img2);
+div.insertAdjacentElement("beforeend",p_img2);
 
+let p_img3=document.createElement('p');
+let img3=document.createElement('img');
+img3.setAttribute("src","hanako.png");
+p_img3.insertAdjacentElement('beforeend',img3);
+div.insertAdjacentElement("beforeend",p_img3);
+
+// 練習4-4 箇条書き削除プログラム(
+let w = document.querySelectorAll('ul#location>li'); 
+for(let i of w){
+	i.remove();
+} 
 	// 練習4-5 箇条書き追加プログラム
+	let x=document.querySelector('ul#location');
+for(let i of data){
+	let a =document.createElement('li');
+	a.textContent=i.name+"…　緯度："+i.lat+"…　,経度："+i.lng;
+	x.insertAdjacentElement('beforeend',a);
+}
+
