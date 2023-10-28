@@ -6,12 +6,16 @@
     text-align: center;
 }
 .main img{
-    width: 50%;
+    width: 300px;
     vertical-align: middle;
 }
+.main button{
+    font-size: 24px;
+}
 .thumbnails{
-    opacity: 0.5;
+    opacity: 0．5;
+    text-align: center;
 }
 .thumbnails img{
-    width: 10%;
+    width: 50px;
 }
