@@ -1,0 +1,17 @@
+.title{
+    font-size: xx-large;
+    text-align: center;
+}
+.main{
+    text-align: center;
+}
+.main img{
+    width: 50%;
+    vertical-align: middle;
+}
+.thumbnails{
+    opacity: 0.5;
+}
+.thumbnails img{
+    width: 10%;
+}
