@@ -32,8 +32,3 @@ function makeURL(num) {
     return head + n + tail;
 }
 let thumbnailsElement = document.querySelector("div.thumbnails");
-
-let thumbnailsImges = thumbnailsElement.children;
-for(let i=0;i<thumbnailsImges.length;i++){
-    thumbnailsImges[i].style.opacity="1.0";
-}
