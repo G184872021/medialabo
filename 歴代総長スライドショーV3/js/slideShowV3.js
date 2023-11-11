@@ -1,7 +1,7 @@
 let count = 0;
 let url;
-const main = document.querySelector("div>img");
-const thumb = document.querySelector("div.thumbnails");
+const main = document.querySelector("div.main img");
+const thumbnailsElement = document.querySelector("div.thumbnails");
 
 function next() {
     let old = count;
@@ -40,4 +40,3 @@ function makeURL(num) {
     }
     return head + n + tail;
 }
-let thumbnailsElement = document.querySelector("div.thumbnails");
