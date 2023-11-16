@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+.main img {
+    width: 300px;
+    vertical-align: middle;
+}
+
+.thumbnails {
+    text-align: center;
+}
+
+.thumbnails img {
+    width: 50px;
+    opacity: 0.3;
+}
+
+.navi {
+    text-align: center;
+}
+
+button {
+    font-size: 24px;
+}
+
+.title {
+    font-size: xx-large;
+}
+
+.thumbnails img.selected {
+    opacity: 1.0;
+}
