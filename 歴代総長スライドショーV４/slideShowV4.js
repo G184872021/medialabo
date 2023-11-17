@@ -81,7 +81,7 @@ function autoPlay() {
   
   function doubleSpeed() {
     stop();
-    speed = 500; // 0.5 second
+    speed = 500; 
     play();
   }
   
@@ -89,7 +89,7 @@ function autoPlay() {
 func
   function reversePlay() {
     stop();
-    speed = 1000; // 1 second
+    speed = 1000; 
     prev();
     timer = 
     timer = setT
@@ -98,11 +98,9 @@ func
   
   function doubleReverseSpeed() {
     stop();
-    speed = 500; // 0.5 second
+    speed = 500; 
     prev();
-    timer = 
-    timer = setTime
-  setTimeout(() => { speed = 1000; play(); }, speed);
+    timer =  setTimeout(() => { speed = 1000; play(); }, speed);
   }
 
   document.getElementById("play").addEventListener("click", play);
