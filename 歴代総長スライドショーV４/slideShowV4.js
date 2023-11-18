@@ -71,12 +71,16 @@ function autoPlay() {
     
    
   stop();
-    thumbnails[count].classList.remove("selected");
+  /*
+    thumbnails[count].classList.remove("selected");*/
+    thumb.children[count].classList.remove("selected");
     count = 0;
     
     url = makeURL(count);
     main.setAttribute("src", url);
-    thumbnails[count].classList.add("selected");
+    /*
+    thumbnails[count].classList.add("selected");*/
+    thumb.children[count].classList.add("selected");
   }
   
   function doubleSpeed() {
