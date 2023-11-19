@@ -90,7 +90,7 @@ function autoPlay() {
   }
   
 
-func
+
   function reversePlay() {
     stop();
     speed = 1000; 
@@ -112,7 +112,7 @@ document.getElementById("stop").addEventListener("click", stop);
 document.getElementById("reset").addEventListener("click", reset);
 document.getElementById("doubleSpeed").addEventListener("click", doubleSpeed);
 
-docume
+
 document.getElementById("reversePlay").addEventListener("click", reversePlay);
 document.getElementById("doubleReverseSpeed").addEventListener("click", doubleReverseSpeed);
 
