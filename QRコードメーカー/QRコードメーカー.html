@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Code Generator</title>
-  
-
-<!-- Load Google Charts API -->
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRコードメーカー</title>
 </head>
 <body>
-
-  <label for="textInput">Enter text:</label>
-  <input type="text" id="textInput" oninput="generateQRCode()">
-
-  <!-- Display QR Code -->
-  <div id="qrcode"></div>
-
-  <!-- Load QRコードメーカー.js -->
-  <script type="text/javascript" src="QRコードメーカー.js"></script>
+    <h1>QRコードメーカー</h1>
+    QRコードにしたいメッセージを入力してください：
+    <input type="text" id="mes">
+    <button onclick="generate()">生成</button>
+    <img id="qrcode" alt="QR Code">
+  <script src="QRコードメーカー.js"></script>
 </body>
 </html>
+

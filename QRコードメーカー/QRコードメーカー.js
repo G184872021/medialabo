@@ -1,30 +1,17 @@
-// Load Google Charts API
-google.charts.load('current', { 'packages': ['corechart'] });
 
-// Set a callback to run when the Google Charts API is loaded
-google.charts.setOnLoadCallback(generateQRCode);
+/*const message=document.getElementById("mes");*/
+/*const url="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=";*/
+/*const qr=url+message.value;
 
-function generateQRCode() {
-  
- 
-// Get the input text
-  var inputText = document.getElementById('textInput').value;
+function generate(){
+    console.log(message.value);
+    console.log(qr);
+}*/
 
-  // Create a data table with the input text
-  var data = google.visualization.arrayToDataTable([
-    ['Text', 'Value'],
-    ['', inputText]
-  ]);
-
-  // Set chart options
-  var options = {
-    width: 200,
-    height: 200
-  };
-
-  // Create a QR code chart
-  var chart = new google.visualization.QRCode(document.getElementById('qrcode'));
-
-  // Draw the chart with the input text and options
-  chart.draw(data, options);
+function generate() {
+    const message = document.getElementById("mes").value.trim();
+    const url = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=" + encodeURIComponent(message);
+    const qrcodeImg = document.getElementById("qrcode");
+    qrcodeImg.src = url;
+    qrcodeImg.alt = message; 
 }
