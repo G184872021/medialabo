@@ -19,13 +19,14 @@ function startGame() {
 
 
   // タップカウンターのリセットと表示
-
-
+  counter = 0;
+  score.textContent = counter;
 
   // タイマーリセット(カウントダウン＋10秒)
   countTimer = 13;
   // タイマーを起動
   countTime(countTimer);
+  
 }
 
 // タイマー処理
@@ -41,6 +42,8 @@ function countTime(time) {
       tapFlag = true;
 
     }
+    countDown.textContent = time;
+    
     time -= 1;
     // １秒後にtimeを引数にしてcountTime()を呼び出す
     setTimeout(countTime, 1000, time);
@@ -59,7 +62,6 @@ function tapCount() {
   if (tapFlag) { 
     counter += 1;
 	// タップ数を表示
-	
-	
+  score.textContent = counter;
   }
 }
