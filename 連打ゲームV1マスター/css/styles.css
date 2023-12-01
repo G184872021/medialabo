@@ -1,0 +1,23 @@
+.content {
+  text-align: center;
+}
+
+.score {
+  text-align: right;
+}
+
+.title,.score{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.countDown {
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
