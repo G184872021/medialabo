@@ -81,14 +81,22 @@ const ncmb = new NCMB(APP_KEY, CLIENT_KEY);
 // ニフクラデータストアへのデータの保存
 async function saveScore (name, score) {
   // 保存先を作成
+  const ScoreClass = ncmb.DataStore("Score");
+  const scoreData = new ScoreClass();
 
 
   // 名前とスコアをset
-
+  scoreData.set("name", name);
+  scoreData.set("score", score);
 
 
   // データストアに保存
-
+  try {
+    await scoreData.save();
+    console.log("スコアが保存されました");
+  } catch (error) {
+    console.error("スコアの保存中にエラーが発生しました:", error);
+  }
 
 }
 
@@ -96,17 +104,18 @@ function toRanking() {
     // データ取得
     checkRanking();
     // ランキング部を表示・main部を非表示
-    
+    main.style.display = "none";
+  document.getElementById("ranking").style.display = "block";
 
 }
 
 
 async function checkRanking() {
 // データストアを指定
-
+const ScoreClass = ncmb.DataStore("Score");
 
 // scoreの降順でデータ5件を取得するように設定する
-
+const results = await ScoreClass.order("score", true).limit(5).fetchAll();
 
 
 // 取得したデータ(scoreとname）を元に、表に値を入れる
