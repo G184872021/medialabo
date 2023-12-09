@@ -74,8 +74,8 @@ function imputName(count){
   }
 }
 
-const APP_KEY = 自分のアプリケーションキー;
-const CLIENT_KEY = 自分のクライアントキー;
+const APP_KEY = f84848f521f1aaf18428d3187c1ae566005b15aeb67dede842bdc045112331d;
+const CLIENT_KEY = d9468182ef030252fdce6c4eba592774803923ae98043b195ad77ace5d0ffac7;
 const ncmb = new NCMB(APP_KEY, CLIENT_KEY);
 
 // ニフクラデータストアへのデータの保存
