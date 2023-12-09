@@ -27,6 +27,12 @@ function startGame() {
   // タイマーを起動
   countTime(countTimer);
 }
+// 「戻る」ボタン押下時の処理
+function toMain() {
+  // メイン部を表示・ランキング部を非表示
+  main.style.display = "block";
+  document.getElementById("ranking").style.display = "none";
+}
 
 // タイマー処理
 function countTime(time) {
@@ -74,8 +80,8 @@ function imputName(count){
   }
 }
 
-const APP_KEY = f84848f521f1aaf18428d3187c1ae566005b15aeb67dede842bdc045112331d;
-const CLIENT_KEY = d9468182ef030252fdce6c4eba592774803923ae98043b195ad77ace5d0ffac7;
+const APP_KEY = 2215+"e4d0626077d7bdc0c76165d448ea31fe977716f6bc1cc4ac3a7667d7cbe1";
+const CLIENT_KEY = 991+"afcbdb763e43d767985480becd26f70de6539f088baa70ff9714653b65e9a";
 const ncmb = new NCMB(APP_KEY, CLIENT_KEY);
 
 // ニフクラデータストアへのデータの保存
