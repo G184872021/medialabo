@@ -27,11 +27,22 @@ function startGame() {
   // タイマーを起動
   countTime(countTimer);
 }
+
+// ページが読み込まれたときの処理
+document.addEventListener('DOMContentLoaded', function () {
+  // 初期表示ではランキング関連の要素を非表示にする
+  document.getElementById("ranking").style.display = "none";
+});
+
+
 // 「戻る」ボタン押下時の処理
 function toMain() {
   // メイン部を表示・ランキング部を非表示
   main.style.display = "block";
   document.getElementById("ranking").style.display = "none";
+
+  rankButton.style.display = "block";
+  startButton.style.display = "block";
 }
 
 // タイマー処理
