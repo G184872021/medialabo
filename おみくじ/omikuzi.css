@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#start-container, #quiz-container, #result-container {
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+}

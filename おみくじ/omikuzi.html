@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizアプリ</title>
+    <link rel="stylesheet" href="omikuzi.css">
+</head>
+<body>
+    <div id="start-container">
+        <button onclick="startQuiz()">はじめる</button>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <div id="question"></div>
+        <div id="options"></div>
+        <input type="text" id="username" placeholder="あなたの名前">
+        <button onclick="checkAnswer()">回答する</button>
+        <button onclick="nextQuestion()" style="display: none;">つぎへ</button>
+    </div>
+
+    <div id="result-container" style="display: none;">
+        <div id="result-message"></div>
+        <button onclick="restartQuiz()">はじめに戻る</button>
+    </div>
+
+    <script src="omikuzi.js"></script>
+</body>
+</html>
