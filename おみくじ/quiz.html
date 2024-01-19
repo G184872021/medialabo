@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三択 Quiz アプリ</title>
+    <link rel="stylesheet" href="quiz.css">
+    <table><h1>サッカークイズ⚽</h1></table>
+</head>
+<body><div id="start-container" class="container">
+    <button id="start-button" onclick="startQuiz()">はじめ</button>
+</div>
+<button id="history-button" class="btn" onclick="fetchUserData()">過去の正解数</button>
+<div id="quiz-container" class="container hidden">
+    <div id="question-container"></div>
+    <div id="answer-buttons" class="btn-container"></div>
+    <button id="next-button" class="btn" onclick="nextQuestion()">つぎへ</button>
+</div>
+
+<div id="result-container" class="container hidden">
+    <h2 id="result-text"></h2>
+    <button id="restart-button" class="btn" onclick="restartQuiz()">はじめに戻る</button>
+</div>
+
+<!-- ランキング部の追加 -->
+<div id="ranking-container" class="container hidden">
+    <h2>過去の正解数ランキング</h2>
+    <table id="ranking-table">
+        <tr>
+            <th>名前</th>
+            <th>正解数</th>
+        </tr>
+    </table>
+    <button id="back-button" class="btn" onclick="backToMain()">戻る</button>
+</div>
+
+<script src="quiz.js"></script>
+</body>
+    
+</html>
