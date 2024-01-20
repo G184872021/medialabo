@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+     <table><h1>サッカークイズ⚽</h1></table>
+</head>
+<body>
+    <div id="start-container" class="container">
+    <button id="start-button" onclick="startQuiz()">開始</button>
+
+</div>
+
+<div id="quiz-container" class="container hidden">
+    <div id="question-container"></div>
+    <div id="answer-buttons" class="btn-container"></div>
+    <button id="next-button" class="btn" onclick="nextQuestion()">スキップ</button>
+</div>
+
+<div id="result-container" class="container hidden">
+    <h2 id="result-text"></h2>
+    <button id="restart-button" class="btn" onclick="restartQuiz()">はじめに戻る</button>
+</div>
+
+<div id="name-input-container" class="container hidden">
+        <input type="text" id="name-input" placeholder="名前を入力してください">
+        <button id="name-submit-button" class="btn" onclick="startQuiz()">OK</button>
+ </div>
+ 
+<script src="ncmb.min.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

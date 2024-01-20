@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: URL=('https://putiya.com/img/sport/soccer01/soccer01_a_09.png');
+    background-color: bisque;
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
@@ -14,6 +14,24 @@ body {
     height: 100vh;
     margin: 0;
 }
+.table{
+    font-size: medium;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#start-button {
+            background-color:#3498db; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
 
 .container {
     text-align: center;
@@ -22,7 +40,7 @@ body {
 .btn-container {
     display: flex;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 20px 0;
 }
 
 .btn {

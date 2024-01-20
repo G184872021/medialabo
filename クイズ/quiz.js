@@ -1,5 +1,17 @@
+const NCMB_APP_KEY = "b5c0ddb59b556758380078d63f5cd899daf00bef036287bfe5525ed51c140540";
+const NCMB_CLIENT_KEY = 3169+"a074af2d7f32b3439943a548015cfc200b8d5906af2910f0ae39d27d3887";
+const ncmb = new NCMB(NCMB_APP_KEY, NCMB_CLIENT_KEY);
+
+
+let currentQuestionIndex = 0;
+let score = 0;
+let userName;
+
 const startContainer = document.getElementById('start-container');
+const nameInputContainer = document.getElementById('name-input-container');
 const startButton = document.getElementById('start-button');
+const nameInput = document.getElementById('name-input');
+const nameSubmitButton = document.getElementById('name-submit-button');
 const quizContainer = document.getElementById('quiz-container');
 const questionContainer = document.getElementById('question-container');
 const answerButtonsContainer = document.getElementById('answer-buttons');
@@ -8,32 +20,31 @@ const resultContainer = document.getElementById('result-container');
 const resultText = document.getElementById('result-text');
 const restartButton = document.getElementById('restart-button');
 
-let currentQuestionIndex = 0;
-let score = 0;
-let userName;
 
 
-startButton.addEventListener('click', startQuiz);
+startButton.addEventListener('click', showNameInput);
+nameSubmitButton.addEventListener('click', startQuiz);
 restartButton.addEventListener('click', restartQuiz);
 
+
+function showNameInput() {
+            startContainer.classList.add('hidden');
+            nameInputContainer.classList.remove('hidden');
+        }
+
+
 function startQuiz() {
-    userName = prompt('名前を入力してください:');
+    userName = nameInput.value.trim();
     if (userName) {
         startContainer.classList.add('hidden');
+
+        nameInputContainer.classList.add('hidden');
+
         quizContainer.classList.remove('hidden');
         currentQuestionIndex = 0;
         score = 0;
         showQuestion(chooseRandomQuestions());
         
-    }
-}
-
-function nextQuestion() {
-    if (currentQuestionIndex < 2) {
-        currentQuestionIndex++;
-        showQuestion(chooseRandomQuestions());
-    } else {
-        showResult();
     }
 }
 
@@ -74,6 +85,7 @@ function checkAnswer(answer) {
         currentQuestionIndex++;
         showQuestion(chooseRandomQuestions());
     } else {
+        saveUserInfo(userName, score); 
         showResult();
     }
 }
@@ -82,14 +94,61 @@ function showResult() {
     quizContainer.classList.add('hidden');
     resultContainer.classList.remove('hidden');
     resultText.innerText = `${userName}さん、${score}問正解でした。`;
+
 }
 
 function restartQuiz() {
     startContainer.classList.remove('hidden');
     quizContainer.classList.add('hidden');
     resultContainer.classList.add('hidden');
-   
 }
+
+
+async function saveUserInfo(name, score) {
+    const UserInfoClass = ncmb.DataStore('UserInfo');
+    const userInfoData = new UserInfoClass();
+    userInfoData.set('name', name);
+    userInfoData.set('score', score);
+
+    try {
+        await userInfoData.save();
+        console.log('ユーザ情報が保存されました');
+    } catch (error) {
+        console.error('ユーザ情報の保存中にエラーが発生しました:', error);
+    }
+}
+async function displayUserInfo() {
+    const UserInfoClass = ncmb.DataStore('UserInfo');
+    const query = UserInfoClass.equalTo('name', userName);
+
+    try {
+        const userInfo = await query.fetch();
+        if (userInfo) {
+            console.log(`${userInfo.get('name')}さんの正解数: ${userInfo.get('score')}問`);
+        }
+    } catch (error) {
+        console.error('ユーザ情報の取得中にエラーが発生しました:', error);
+    }
+}
+
+
+
+function showResult() {
+    quizContainer.classList.add('hidden');
+    resultContainer.classList.remove('hidden');
+    resultText.innerText = `${userName}さん、${score}問正解でした。`;
+}
+
+
+
+function restartQuiz() {
+    startContainer.classList.remove('hidden');
+    quizContainer.classList.add('hidden');
+    resultContainer.classList.add('hidden');
+}
+
+
+
 const questions = [
     {
         question: 'サッカー日本代表のFIFAランキングは何位でしょう？',
@@ -181,4 +240,5 @@ const questions = [
             { text: '浅野', correct: false }
         ]
     },
+
 ]
